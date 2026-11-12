@@ -1,0 +1,10 @@
+step,rows_in,rows_fixed,rows_removed,reason
+trim_whitespace,300,0,0,"leading, trailing or repeated spaces in any column"
+standardise_brand_dealer,300,0,0,"case variants mapped to canonical names (vw -> VW, DURBAN -> Durban); unrecognised names removed"
+parse_numeric_text,300,0,0,"currency symbols, thousands separators or 'km' stripped (R 411 900 -> 411900); unreadable text -> missing"
+remove_missing_key_fields,300,0,0,cannot guess a price or age: removed (listed in rejected_rows.csv)
+remove_impossible_values,300,0,0,a negative price or age is a data error we cannot correct safely: removed
+remove_exact_duplicates,300,0,0,identical rows after cleaning: kept first
+resolve_conflicting_ids,300,0,0,same vehicle_id with different values: kept the row with the highest days_on_lot (assumed latest snapshot)
+impute_mileage,300,0,0,"mileage missing, unreadable or negative: median of same model year; mileage_imputed = True"
+TOTAL,300,0,0,rows_out = 300; rows_fixed counts each kept row once (step rows can overlap)
