@@ -1,0 +1,25 @@
+vehicle_id,problem,column,original,messy
+VID-0081,extra_spaces,brand,BMW,'  BMW'
+VID-0167,extra_spaces,model,Seltos,'  Seltos'
+VID-0147,extra_spaces,model,Polo Vivo,'  Polo Vivo'
+VID-0007,extra_spaces,dealer_location,Johannesburg,'  Johannesburg'
+VID-0149,extra_spaces,brand,Ford,'Ford  '
+VID-0269,extra_spaces,brand,Toyota,'Toyota  '
+VID-0142,case_mismatch,brand,Ford,ford
+VID-0143,case_mismatch,dealer_location,Durban,DURBAN
+VID-0145,case_mismatch,brand,Ford,FORD
+VID-0137,case_mismatch,dealer_location,Durban,DURBAN
+VID-0234,case_mismatch,dealer_location,Bloemfontein,BLOEMFONTEIN
+VID-0096,missing_mileage,mileage_km,92200,''
+VID-0062,missing_mileage,mileage_km,38500,''
+VID-0256,missing_mileage,mileage_km,50100,'N/A'
+VID-0171,negative_value,days_on_lot,40,-40
+VID-0297,negative_value,list_price,440900,-440900
+VID-0229,negative_value,mileage_km,37400,-37400
+VID-0224,text_in_numeric,list_price,411900,R 411 900
+VID-0260,text_in_numeric,mileage_km,33300,"33,300 km"
+VID-0009,text_in_numeric,days_on_lot,51,TBC
+VID-0208,duplicate_id_exact,,,
+VID-0278,duplicate_id_exact,,,
+VID-0237,duplicate_id_conflicting,,,
+VID-0125,duplicate_id_conflicting,,,
